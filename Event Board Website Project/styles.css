@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+ }
+ 
+ .topbar {
+    background: rgb(27, 212, 188);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position:sticky;
+    top: 0;
+    z-index: 999;
+ }
+ 
+ .topbar__cont {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 50px;
+    padding: 10px 10px;
+    font-weight:bolder;
+ }
+
+ #topbar__logo {
+   background-color: #b38add;
+   background-image:linear-gradient(to top, #b38 0%,#a067d8 100%);
+   background-size: 100%;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color:transparent;
+   display: flex;
+   font-size: 1.5rem;
+   align-items:center;
+   cursor:pointer;
+   text-decoration: none;
+ }
+
+ .fa-hippo {
+    margin-right: 0.5rem;
+ }
+
+ .topbar__menu {
+    display:flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+ }
+
+ .topbar__item {
+    height: 80px;
+ }
+
+ .navbar__links {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+ }
+ 
+ .search {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background-color: #f6f6f6;
+ }
+ .search-input {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 300px;
+ }
+ .search-icon {
+    color: #b38add;
+ }
+
+ .topbar__log {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px; 
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #b38add;
+    color: #ffffff;
+    
+
+}
+
+
+
+.signup:hover,
+.login:hover {
+    background:#b38;
+    transition: all 0.3s ease;
+
+}
+
+.navbar__links:hover,
+.navbar__links:focus {
+    color: #b38;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:960px) {
+    .topbar__cont {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .topbar__menu {
+        background: rgb(27, 212, 188);
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1; 
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .topbar__menu.active {
+        background: rgb(27, 212, 188);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    .search {
+
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+   
+    }
+    .search-icon {
+        float:left;
+    }
+    .search-input {
+        float: left;
+        margin-left: 25px;
+    }
+
+    #topbar__logo {
+        padding-left: 25px;
+    }
+    .topbar__toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s  ease-in-out;
+        background: rgb(255, 255, 255);
+    }
+    .topbar__item {
+        width: 100%;
+    }
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    #mobile {
+        position:absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%,20%);
+    }
+    .topbar__log {
+        padding-bottom: 2rem;
+    }
+    .signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    .topbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    #mobile.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .search {
+       
+    }
+
+
+
+}
